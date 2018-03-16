@@ -1,8 +1,10 @@
 const express=require('express');
 const hbs=require('hbs');
 const app=express();
+const port=process.env.PORT || 3000;
 app.set('view engine','hbs');
 hbs.registerPartials(__dirname+'/views/partials');
+
 
 // app.get('/',(req,res)=>{
 //   res.send('<h1>Hello World<h2>');
@@ -38,6 +40,6 @@ app.get('/about',(req,res)=>{
 
   });
 });
-app.listen(3000,()=>{
-  console.log('connected to port 3000');
+app.listen(port,()=>{
+  console.log('connected to port ');
 });
